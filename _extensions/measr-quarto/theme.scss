@@ -1,0 +1,108 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$theme-lightblue: #8ECAE6;
+$theme-blue: #219EBC;
+$theme-darkblue: #023047;
+$theme-red: #D7263D;
+$theme-cream: #F3D3BD;
+
+$body-bg: #000000;
+$presentation-heading-color: $theme-darkblue;
+$presentation-heading-font-weight: 700;
+$body-color: $theme-darkblue;
+$link-color: $theme-blue;
+
+$presentation-heading-font: 'Playfair Display', sans-serif;
+$font-family: 'Open Sans', sans-serif;
+$font-family-monospace: 'Fira Code', monospace;
+$presentation-h2-font-size: 40pt;
+
+$code-block-border-color: $theme-darkblue;
+$code-block-font-size: 18pt;
+$code-block-bg: #EEEEEE;
+$btn-code-copy-color: $theme-darkblue;
+$btn-code-copy-color-active: $theme-darkblue;
+
+/* TODO: Customize presentation appearance by setting SCSS variables */
+/* See https://quarto.org/docs/presentations/revealjs/themes.html#customizing-themes */
+
+/*-- scss:rules --*/
+
+.reveal .slides #title-slide {
+  text-align: left;
+}
+
+/* quarto title slide */
+.reveal .slides section#title-slide {
+  h1 {
+    font-size: 60pt;
+    color: white;
+    position: fixed;
+    bottom: 100%;
+  }
+
+  .subtitle {
+    font-family: "Playfair Display";
+    font-size: 28pt;
+    color: white;
+    position: static;
+    margin-bottom: 1.75rem;
+  }
+
+  .quarto-title-authors {
+    justify-content: left;
+  }
+
+  .quarto-title-author {
+    padding-left: 0;
+  }
+
+  .quarto-title-author-name {
+    font-family: "Open Sans";
+    font-size: 20pt;
+    color: white;
+    text-align: left;
+  }
+}
+
+/* section headers */
+.reveal .slides .title-slide h1 {
+  font-size: 45pt;
+}
+
+/* default slides */
+.reveal .slides h3 {
+  font-size: 28pt;
+}
+
+
+/* bullets */
+.reveal .slides ul {
+  list-style-type: disc;
+}
+.reveal .slides li {
+  margin-top: 1em !important;
+  margin-bottom: 0 !important;
+  font-size: 24pt !important;
+}
+
+/* sub-bullets */
+.reveal .slides ul ul {
+  list-style-type: circle;
+}
+.reveal .slides li li {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  font-size: 22pt !important;
+}
+
+/* general text */
+.reveal p {
+  margin-bottom: 0;
+}
+
+.reveal .slides .cell pre code {
+  background-color: #EFEFEF;
+  color: #333333;
+}
